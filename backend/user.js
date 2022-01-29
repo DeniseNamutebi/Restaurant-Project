@@ -8,11 +8,12 @@ const Schema = mongoose.Schema;
 //   useUnifiedTopology: true,
 // });
 
-//create user Schema & model
+//create Schemas & model
 const UserSchema =  new Schema({
     username: String,
     password: String,
     name: String,
-    order: [],
+    orders: [anotherSchema],
 
 })
+
