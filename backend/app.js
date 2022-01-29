@@ -1,18 +1,22 @@
-const { MongoClient } = require("mongodb");
+const express = require("express");
+const bodyParser = require("body-parser");
+const routes = require("./routes/api");
+const mongoose = require("mongoose");
 
-require('dotenv').config();
+//set up express app
+const app = express();
 
-const uri = process.env.DB_CONNECTION_STRING;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-const client = new MongoClient(uri);
 
-async function run() {
-try {
-    await client.connect();
-    console.log('db connected')
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+//intialize roots
+app.use(routes);
+
+//error handling 
+app.use((err, req, res, next) => {
+  res.send({ error: err.message });
+});
+
+
+module.exports = app;

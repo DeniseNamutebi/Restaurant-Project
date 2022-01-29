@@ -6,11 +6,12 @@ const Schema = mongoose.Schema;
 //create Order Schemas & model
 const OrderSchema = new Schema({
     user: [{type: Schema.Types.ObjectId, ref: 'User'}],
-    date_of_order: {type: Date},
-    item: [{type: Schema.Types.ObjectId, ref: 'MenuItem'}]
+    date_of_order: Date,
+    items: [{type: Schema.Types.ObjectId, ref: 'MenuItem'}]
 })
 
 
 
+const Order = mongoose.model('order', OrderSchema);
 
-const Order = mongoose.model('order');
+module.exports = Order;
