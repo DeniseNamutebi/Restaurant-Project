@@ -12,10 +12,9 @@ const BookingSchema = new Schema({
 })
 
 const UserSchema =  new Schema({
-    username: {type: String, required: true},
+    username: {type: String, required: true,  unique: true},
     password: {type: String, required: true},
     name: String,
-    orders: [{type: Schema.Types.ObjectId, ref: 'Order'}],
     bookings: [BookingSchema]
 })
 

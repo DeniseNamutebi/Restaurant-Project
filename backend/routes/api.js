@@ -3,7 +3,8 @@ const router = express.Router();
 const MenuItem = require("../models/menu");
 const { MongoClient } = require("mongodb");
 
-require("dotenv").config();
+require("dotenv").config()
+
 
 
 const uri = process.env.DB_CONNECTION_STRING;
@@ -15,12 +16,14 @@ const client = new MongoClient(uri, {
 
 const collection = client.db("restaurantDB").collection("menu");
 
+
+
 //get a collection of menu items
 router.get("/menu", async (req, res) => {
   await client.connect();
-  await collection.find({}).toArray((err, items) => {
-    res.send(items);
-  });
+ const items = await collection.find({}).toArray()
+  res.send(items);
+  await client.close()
 });
 
 //get a menu item document
