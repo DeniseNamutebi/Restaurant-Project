@@ -30,7 +30,7 @@
   }
 
   .link {
-    @apply bg-red hover:bg-orange text-white p-4 rounded-md;
+    @apply bg-navy hover:bg-orange text-white p-4 rounded-md;
   }
 
   .container {
