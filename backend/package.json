@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "start": "nodemon server.js"
   },
   "author": "",
@@ -15,6 +16,10 @@
     "cors": "^2.8.5",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
+    "express-jwt": "^6.1.0",
+    "express-oauth2-jwt-bearer": "^1.1.0",
+    "express-openid-connect": "^2.5.2",
+    "jwks-rsa": "^2.0.5",
     "mongodb": "^4.3.1",
     "mongoose": "^6.1.8"
   },

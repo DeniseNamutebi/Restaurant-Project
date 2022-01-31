@@ -1,0 +1,13 @@
+{
+  "name": "Le Restaurant",
+  "description": "The best restaurant in the world!!!",
+  "subText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum luctus leo, non ornare mauris mollis sed. Quisque bibendum fermentum felis, a semper orci ultricies a. Nunc est purus, aliquam a ipsum id, dapibus euismod lorem. Nunc a quam metus. Praesent sagittis enim sit amet velit convallis venenatis. Donec feugiat condimentum ante eget vehicula. Quisque eget libero purus. Maecenas consequat consequat purus.",
+  "email": "info@le-restaurant.com",
+  "tel": "0208 553 1111",
+  "address": "111 New Road",
+  "city": "London",
+  "country": "United Kingdom",
+  "postCode": "XX1 3XX",
+  "mapsLink": "https://goo.gl/maps/x8rgicozRNGChDXA9",
+  "image": "../images/9u.jpg"
+}

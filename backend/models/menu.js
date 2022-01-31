@@ -12,7 +12,8 @@ const MenuItemSchema = new Schema({
     unique: true
  },
   Price: Number,
-  InStock: Number
+  InStock: Number,
+  Img: String,
 });
 
 const MenuItem = mongoose.model("menu", MenuItemSchema, "menu");

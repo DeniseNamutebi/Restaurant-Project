@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Palatino";
+    font-weight: 400;
+    src: url("../src/fonts/pala.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Palatino";
+    font-weight: 600;
+    src: url("../src/fonts/palab.ttf");
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-red hover:bg-orange text-white p-4 rounded-md;
+  }
+
+  .btn-delete {
+    @apply bg-red hover:bg-orange text-white p-4 rounded-md;
+  }
+
+  .btn-disabled {
+    @apply text-white p-4 rounded-md;
+  }
+
+  .link {
+    @apply bg-red hover:bg-orange text-white p-4 rounded-md;
+  }
+
+  .container {
+    @apply py-4  mt-12 font-palatino;
+  }
+
+  html {
+    @apply font-palatino;
+  }
+}

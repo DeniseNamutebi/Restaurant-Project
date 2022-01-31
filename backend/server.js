@@ -9,7 +9,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 //listen for ports and database connection
-const server = app.listen(process.env.port || 3001, () => {
+const server = app.listen(process.env.PORT || 3001, () => {
   console.log("server is running");
 
 
