@@ -102,7 +102,15 @@ const Menu = () => {
         {noItems > 0 ? (
           <div>
             <span> {noItems} Items </span>
-            <span> {total} Total </span>
+            <span>
+              {" "}
+              £
+              {total.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}{" "}
+              Total{" "}
+            </span>
             <button className="btn" onClick={() => navigate("/order")}>
               View order
             </button>
