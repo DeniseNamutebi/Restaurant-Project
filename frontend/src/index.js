@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 
@@ -12,11 +13,13 @@ import Contact from "./components/contact";
 import Confirm from "./components/confirm";
 import Order from "./components/order";
 
+console.log("client id", process.env.REACT_APP_AUTH0_CLIENT_ID)
+
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
       domain={process.env?.REACT_APP_AUTH0_DOMAIN}
-      clientId={String(process.env?.REACT_APP_AUTHO_CLIENT_ID)}
+      clientId={process.env?.REACT_APP_AUTH0_CLIENT_ID}
       redirectUri={window.location.origin}
       audience={`https://${process.env?.REACT_APP_AUTH0_DOMAIN}/api/v2/`}
       scope="read:current_user update:current_user_metadata"
